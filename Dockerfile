@@ -1,7 +1,7 @@
 FROM python:3.9
 
 RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
-RUN pip install -U Flask uWSGI
+RUN pip install -U Flask uWSGI requests redis
 WORKDIR /app
 COPY app /app
 COPY cmd.sh /
