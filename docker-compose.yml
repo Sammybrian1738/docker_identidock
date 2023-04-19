@@ -1,0 +1,10 @@
+version: "1.0"
+services:
+  identidock:
+    build: .
+    ports:
+      - "5123:5000"
+    environment:
+      ENV: DEV
+    volumes:
+      - ./app:/app
